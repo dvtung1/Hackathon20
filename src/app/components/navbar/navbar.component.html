@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+  <a class="navbar-brand" routerLink="/">Fake Job Detection</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div
+    *ngIf="!isAuthenticated"
+    class="collapse navbar-collapse"
+    id="navbarNavAltMarkup"
+  >
+    <div class="navbar-nav ml-auto">
+      <a class="nav-item nav-link" routerLink="/predict">Prediction</a>
+    </div>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/result">Result</a>
+    </div>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/job">Job</a>
+    </div>
+  </div>
+  <div
+    *ngIf="isAuthenticated"
+    class="collapse navbar-collapse"
+    id="navbarNavAltMarkup"
+  >
+    <div class="navbar-nav ml-auto">
+      <a
+        class="nav-item nav-link"
+        [ngClass]="isManage ? 'active' : ''"
+        routerLink="/manage"
+        >Manage</a
+      >
+    </div>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" (click)="logout()">Log Out</a>
+    </div>
+  </div>
+  </div>
+</nav> 
+

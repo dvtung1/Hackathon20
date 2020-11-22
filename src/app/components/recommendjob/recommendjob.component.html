@@ -1,0 +1,42 @@
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-4" *ngFor="let job of recommendJob">
+<div class="card mb-4 text-center">
+  <div class="mx-auto">
+  <a data-toggle="modal" [attr.data-target]="'#'+ job.id"><img src="{{job.company_logo}}" class="card-img-top" alt="{{job.company}}"></a>
+  </div>
+  <hr>
+  <div class="card-body">
+    <h5 class="card-title mb-4">{{job.title}}</h5>
+    <h6 class="card-subtitle mb-3 text-muted">Location: {{job.location}}</h6>
+    <h6 class="card-subtitle mb-3 text-muted">Employment type: {{job.type}}</h6>
+    <h6 class="card-subtitle mb-4 text-muted">Date posted: {{job.created_at}}</h6>
+    <!-- <p class="card-text" [innerHTML]="job.description"></p> -->
+    <button type="button" data-toggle="modal" [attr.data-target]="'#'+ job.id" mat-raised-button color="primary">Click for more details</button>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" [attr.id]="job.id" tabindex="-1" role="dialog" [attr.aria-labelledby]="'example'+job.id" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" [attr.id]="'example'+job.id">{{job.company}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" [innerHTML]="job.description">
+        
+      </div>
+      <div class="modal-footer">
+        <a href="{{job.company_url}}" target="_blank" class="btn btn-primary">Go to company website</a>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+

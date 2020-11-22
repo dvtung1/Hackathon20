@@ -1,0 +1,143 @@
+ <div class="container">
+
+ <div class="card">
+    <div class="card-body">
+
+  <h1 class="text-center">Job Posting Information</h1>
+  <form (submit)="onSubmit(loginForm)" #loginForm="ngForm">
+    <div class="form-group">
+      <label for="benefitsId">Benefits</label>
+      <textarea
+        class="form-control"
+        id="benefitsId"
+        rows="4"
+        name="benefits"
+        ngModel
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="descriptionId">Description</label>
+      <textarea
+        class="form-control"
+        id="descriptionId"
+        name="description"
+        rows="4"
+        ngModel
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="locationId">Location</label>
+      <input
+        class="form-control"
+        id="locationId"
+        name="location"
+        ngModel
+      />
+    </div>
+    <div class="form-group">
+      <label for="requirementsId">Requirements</label>
+      <textarea
+        class="form-control"
+        id="requirementsId"
+        name="requirements"
+        rows="4"
+        ngModel
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="salaryId">Salary</label>
+      <input
+        type="number"
+        placeholder="0"
+        class="form-control"
+        id="salaryId"
+        name="salary"
+        ngModel
+      />
+    </div>
+    <div class="form-group">
+      <label for="titleId">Title</label>
+      <input
+        class="form-control"
+        id="titleId"
+        name="title"
+        ngModel
+      />
+    </div>
+    <button  [disabled]="loginForm.form.invalid"
+  type="submit" mat-raised-button color="primary">Predict</button>
+  </form>
+</div>
+</div>
+</div>
+
+<!-- <mat-card>
+  <mat-form-field>
+    <label for="benefitsId">Benefits</label>
+    <textarea
+      id="benefitsId"
+      rows="3"
+      name="benefits"
+      ngModel
+      matInput
+    ></textarea>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Predict</button>
+</mat-card> -->
+
+<!-- <mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+     Benefits
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+      <mat-form-field>
+        <textarea
+          id="benefitsId"
+          rows="5"
+          name="benefits"
+          ngModel
+          matInput
+        ></textarea>
+      </mat-form-field>
+    </mat-panel-description>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+     Description
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+      <mat-form-field>
+        <textarea
+          id="benefitsId"
+          rows="5"
+          name="benefits"
+          ngModel
+          matInput
+        ></textarea>
+      </mat-form-field>
+    </mat-panel-description>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+     The exapansion title
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+      <mat-form-field>
+        <textarea
+          id="benefitsId"
+          rows="3"
+          name="benefits"
+          ngModel
+          matInput
+        ></textarea>
+      </mat-form-field>
+    </mat-panel-description>
+  </mat-expansion-panel>
+</mat-accordion> -->

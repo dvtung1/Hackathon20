@@ -1,0 +1,34 @@
+/* card-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+} */
+
+/* .card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+} */
+
+/* .card-img-top {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+} */
+
+.container-fluid {
+  max-width: 90%;
+}
+
+img {
+  float: left;
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+}
+
+/* .modal-dialog {
+  width: 100%;
+  max-width: 1200px;
+} */
